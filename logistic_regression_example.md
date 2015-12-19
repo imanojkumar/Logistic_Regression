@@ -293,19 +293,10 @@ plt.xlabel('Marriage Rating')
 plt.ylabel('Frequency')
 ```
 
-
-
-
-    <matplotlib.text.Text at 0x1710c5f8>
-
-
-
-
 ![png](output_16_1.png)
 
 
 Let's use a stacked barplot to look at the percentage of women having affairs by number of years of marriage.
-
 
 ```python
 affair_yrs_married = pd.crosstab(dta.yrs_married, dta.affair.astype(bool))
@@ -314,14 +305,6 @@ plt.title('Affair Percentage by Years Married')
 plt.xlabel('Years Married')
 plt.ylabel('Percentage')
 ```
-
-
-
-
-    <matplotlib.text.Text at 0x17d83a20>
-
-
-
 
 ![png](output_18_1.png)
 
@@ -383,10 +366,7 @@ model.score(X, y)
 ```
 
 
-
-
     0.72588752748978946
-
 
 
 73% accuracy seems good, but what's the null error rate?
@@ -398,10 +378,7 @@ y.mean()
 ```
 
 
-
-
     0.32249450204209867
-
 
 
 Only 32% of the women had affairs, which means that you could obtain 68% accuracy by always predicting "no". So we're doing better than the null error rate, but not by much.
@@ -625,7 +602,7 @@ Looks good. It's still performing at 73% accuracy.
 
 ## Predicting the Probability of an Affair
 
-Just for fun, let's predict the probability of an affair for a random woman not present in the dataset. She's a 25-year-old teacher who graduated college, has been married for 3 years, has 1 child, rates herself as strongly religious, rates her marriage as fair, and her husband is a farmer.
+Let's predict the probability of an affair for a random woman not present in the dataset. She's a 25-year-old teacher who graduated college, has been married for 3 years, has 1 child, rates herself as strongly religious, rates her marriage as fair, and her husband is a farmer.
 
 
 ```python
